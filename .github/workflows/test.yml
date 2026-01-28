@@ -10,3 +10,15 @@ jobs:
       - name: Hello
         run: |
           echo hello
+          echo 'hello world' >> note.md
+          echo 'good job' >> result.txt
+      
+      - name: Create Github Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: random2026
+          name: Cong Thanh Nguyen
+          body_path: note.md
+          files: |
+            result.txt
+
