@@ -6,6 +6,9 @@ jobs:
   go-go-go:
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: write
+
     steps:
       - name: Hello
         run: |
